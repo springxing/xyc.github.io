@@ -4,7 +4,8 @@
 set -e
 
 # 生成静态文件
-npm run build:md
+#npm run build:md
+npm run docs:build
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
@@ -24,6 +25,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f https://github.com/springxing/xyc.github.io.git master
+git push -f https://github.com/springxing/xyc.github.io.git master:github-pages
 
 cd -
